@@ -1,2 +1,2 @@
 # crocotrip
-Crocotrip Homa Page
+Crocotrip Home Page
