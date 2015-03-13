@@ -1,0 +1,248 @@
+/* Mikhail Nikipelov — http://desir.me/ */
+
+@import url(bootstrap.min.css);
+@import url(reset.css);
+@import url(animations.css);
+
+@import url(http://fonts.googleapis.com/css?family=Noto+Serif:400italic|Roboto+Condensed:700,400&subset=latin,cyrillic);
+
+/* basics */
+
+/*
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*/
+
+input,
+select,
+textarea,
+button {
+  vertical-align: top;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+textarea {
+  overflow: auto;
+}
+button::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner {
+  padding: 0 !important;
+  border: 0 none !important;
+}
+:-moz-placeholder {
+  opacity: 1;
+}
+::-moz-placeholder {
+  opacity: 1;
+}
+
+body {
+	font: 400 18px/30px 'Roboto Condensed', sans-serif;
+	color: #424242;
+    text-rendering: optimizeLegibility;
+    padding: 20px;
+}
+a:focus, img:focus, select:focus, input:focus, textarea:focus, checkbox:focus {
+    outline: inherit;
+}
+
+a {
+    color: #0062a6;
+    text-decoration: none;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+    a:hover {
+        color: #c00;
+        text-decoration: none;
+    }
+    a:active {
+        text-decoration: none;
+    }
+    a:focus {
+        text-decoration: none;
+    }
+
+
+
+/* buttons */
+
+.btn {
+    display: inline-block;
+    background: #95e42e;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    border-radius: 30px;
+    font-size: 21px;
+}
+    .btn:hover {
+        background: #ef9300;
+        color: #fff;
+        text-decoration: none;
+    }
+    .btn:active {
+        background: #d97500;
+        text-decoration: none;
+    }
+
+
+
+/* headers */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+
+
+/* vertical middle */
+
+.table {
+    display: table;
+    width: 100%;
+}
+    .tablecell {
+        display: table-cell;
+        vertical-align: middle;
+        height: 500px;
+    }
+
+
+/* header */
+
+.header {
+    position: relative;
+    
+    background-color: #1b9468;
+    color: #fff;
+    text-align: center;
+    
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+    .header .table {
+        background-image: url(../img/header.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+        .header .tablecell {
+            background-color: rgba(27, 148, 104, 0.7);
+        }
+
+    .header h1, .header h2 {
+        line-height: 1em;
+    }
+
+    .header h1 {
+        font-size: 3.3em;
+        text-transform: uppercase;
+    }
+
+    .header h2 {
+        font-weight: 400;
+        font-family: 'Noto Serif', serif;
+        font-style: italic;
+        margin: 20px 0;
+    }
+
+    .header .btn {
+        background: transparent;
+        border: 2px solid #fff;
+        font-size: 1.3em;
+        color: #fff;
+        padding: 8px 40px;
+        margin: 10px 0 0 0;
+    }
+        .header .btn:hover {
+            background: #fff;
+            color: #018f53;
+        }
+        .header .btn:active {
+            border: 2px solid #b8ffe5;
+            background: #b8ffe5;
+        }
+
+    .header .logo {
+        position: absolute;
+        display: block;
+        width: 189px;
+        height: 40px;
+        background-image: url(../img/logo-white.png);
+        background-size: 189px 40px;
+        text-indent: -314em;
+        top: 40px;
+        left: 40px;
+    }
+
+
+
+/* content */
+
+.content {
+    position: relative;
+}
+
+
+
+/* footer */
+
+.footer {
+    position: relative;
+}
+
+
+
+/* fixes */
+
+.gecko {
+}
+
+.opera {
+}
+
+.mobile {
+}
+
+
+
+/* media */
+
+@media only screen and (max-width: 991px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .header h1 {
+        font-size: 3em;
+    }
+    
+    .header .logo {
+        top: 40px;
+        left: 50%;
+        margin: 0 0 0 -95px;
+    }
+    
+}
