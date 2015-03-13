@@ -348,13 +348,13 @@ h1, h2, h3, h4, h5, h6 {
     .header a[href*="tel:"] {
         top: 100px;
         left: 50%;
-        margin: 0 0 0 -50px;
+        margin: 0 0 0 -59px;
         z-index: 2;
     }
     .header a[href*="mailto:"] {
         top: 100px;
         left: 50%;
-        margin: 0 0 0 23px;
+        margin: 0 0 0 13px;
     }
         .header a[href*="tel:"]:hover, .header a[href*="mailto:"]:hover {
             width: 46px;
