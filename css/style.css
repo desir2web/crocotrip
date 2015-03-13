@@ -190,7 +190,7 @@ h1, h2, h3, h4, h5, h6 {
                 background-size: 80px 80px;
             }
 
-    .header .btn {
+    .header .btn.start {
         background: transparent;
         border: 2px solid #fff;
         font-size: 1.3em;
@@ -218,6 +218,75 @@ h1, h2, h3, h4, h5, h6 {
         top: 40px;
         left: 40px;
     }
+
+    .header a[href*="tel:"] {
+        color: #fff;
+        text-decoration: none;
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        background-color: #95e42e;
+        background-image: url(../img/tel.png);
+        background-size: 22px 22px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        text-indent: -10em;
+        padding-left: 0;
+        overflow: hidden;
+        padding-right: 15px;
+        cursor: default;
+        width: 46px;
+        z-index: 1;
+    }
+        .header a[href*="tel:"]:hover {
+            background-color: #78d006;
+            background-image: url(../img/tel.png);
+            background-size: 22px 22px;
+            background-position: 12px center;
+            background-repeat: no-repeat;
+            padding-left: 40px;
+            text-indent: 0;
+            width: 200px;
+            color: #fff;
+        }
+        .header a[href*="tel:"]:active {
+            background-color: #63af00;
+            border: 0;
+        }
+
+    .header a[href*="mailto:"] {
+        color: #fff;
+        text-decoration: none;
+        position: absolute;
+        top: 100px;
+        right: 40px;
+        background-color: #59d2ff;
+        background-image: url(../img/email.png);
+        background-size: 24px 18px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        text-indent: -10em;
+        padding-left: 0;
+        overflow: hidden;
+        padding-right: 15px;
+        width: 46px;
+        z-index: 1;
+    }
+        .header a[href*="mailto:"]:hover {
+            background-color: #27c5ff;
+            background-image: url(../img/email.png);
+            background-size: 24px 18px;
+            background-position: 12px center;
+            background-repeat: no-repeat;
+            padding-left: 40px;
+            text-indent: 0;
+            width: 240px;
+            color: #fff;
+        }
+        .header a[href*="mailto:"]:active {
+            background-color: #009ad3;
+            border: 0;
+        }
 
 
 
