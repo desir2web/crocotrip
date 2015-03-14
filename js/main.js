@@ -39,7 +39,6 @@ $(document).ready(function(){
         setSliderSize();
         setMenuTop();
     });
-
     
     //menu on mobile
     
@@ -51,5 +50,21 @@ $(document).ready(function(){
             $('.nav').removeClass('open');
 			return false;
     });
+    
+    //trigger click on maps
+    
+    function showMapInfo() {
+        var showPos = $('.team').offset().top;
+        $(window).on('scroll',function(){
+            var curPos = $(window).scrollTop();
+            if (curPos > showPos) {
+                $('.ymaps-image').trigger('click');
+            } else {
+                $('.ymaps-image').trigger('click');
+            }
+        });
+    }
+    
+    showMapInfo();
 
 });
