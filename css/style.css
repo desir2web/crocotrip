@@ -122,6 +122,16 @@ img {
         background: #bc3a00;
     }
 
+.btn.mint {
+    background: #00c373;
+}
+    .btn.mint:hover {
+        background: #00834d;
+    }
+    .btn.mint:active {
+        background: #00623a;
+    }
+
 .minimize {
     letter-spacing: -2px;
 }
@@ -454,6 +464,26 @@ h1, h2, h3, h4, h5, h6 {
                                     opacity: .5;
                                 }
 
+.process {
+    margin: 90px 0;
+}
+    .process img {
+        width: 70%;
+        margin: 0 0 0 15%;
+    }
+        .process img.target {
+            width: 80%;
+            margin: 0 0 0 10%;
+        }
+    .process .separator {
+        margin: 40px 0 0 0;
+        }
+    .process .text {
+        text-align: center;
+        width: 90%;
+        margin: 30px auto 0 auto;
+    }
+
 
 
 /* footer */
@@ -667,6 +697,10 @@ h1, h2, h3, h4, h5, h6 {
     
     .slider .slide .description .text {
         margin: 0;
+    }
+    
+    .process {
+        margin: 40px 0;
     }
 
 }
