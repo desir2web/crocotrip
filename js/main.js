@@ -4,9 +4,13 @@ $(document).ready(function(){
         var scrHi = $(window).height()-40;
         $('.tablecell').css('height',scrHi+'px');
     }
+    function setSliderSize() {
+        var scrHi = $(window).height()-90;
+        $('.slide').css('height',scrHi+'px');
+    }
     
     function setMenuTop() {
-        var switchPos = $(window).height()-$('.nav').height()-40;
+        var switchPos = $(window).height()-$('.nav').height()-20;
         $(window).on('scroll',function(){
             var curPos = $(window).scrollTop();
             if (curPos > switchPos) {
@@ -23,6 +27,7 @@ $(document).ready(function(){
      
     //set tablecell height   
     setSize();
+    setSliderSize();
     
     //swicth menu appearance
     setMenuTop();
@@ -31,6 +36,7 @@ $(document).ready(function(){
     
     $(window).on('resize',function(){
         setSize();
+        setSliderSize();
         setMenuTop();
     });
 

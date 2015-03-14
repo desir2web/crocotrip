@@ -390,6 +390,70 @@ h1, h2, h3, h4, h5, h6 {
         margin: 130px 0 45px 0;
     }
 
+.projects {
+
+}
+    .projects .container-fluid {
+        padding: 0;
+    }
+        .slider {
+            background-color: #000;
+            position: relative;
+        }
+            .slider .slide {
+                
+            }
+                .slider .slide .img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-size: cover;
+                    background-position: center center;
+                }
+                .slider .slide .description {
+                    position: absolute;
+                    color: #fff;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(34, 34, 34, 0.9);
+                    opacity: 0;
+                    -webkit-transition: opacity 0.2s ease;
+                    -moz-transition: opacity 0.2s ease;
+                    -ms-transition: opacity 0.2s ease;
+                    -o-transition: opacity 0.2s ease;
+                    transition: opacity 0.2s ease;
+                }
+                    .slider .slide .description:hover {
+                        opacity: 1;
+                    }
+                    .slider .slide .description .container {
+                        position: relative;
+                        height: 100%;
+                        }
+                        .slider .slide .description .container [class*=col] {
+                            position: absolute;
+                            bottom: 0;
+                        }
+                        .slider .slide .description .text {
+                            margin: 0 0 80px 0;
+                            }
+                            .slider .slide .description .text h3 {
+                                font-size: 2em;
+                                margin: 0 0 20px 0;
+                            }
+                            .slider .slide .description .text .link {
+                                display: inline-block;
+                                margin: 0 0 0 5px;
+                                width: 20px;
+                                height: 20px;
+                                background-image: url(../img/link.png);
+                                background-size: cover;
+                                opacity: 1;
+                            }
+                                .slider .slide .description .text .link:hover {
+                                    opacity: .5;
+                                }
+
 
 
 /* footer */
@@ -472,13 +536,23 @@ h1, h2, h3, h4, h5, h6 {
     .header .btn.start {
         margin: 0 0 100px 0;
     }
-
-    .what-we-do .projects {
-        margin: 0;
+    
+    .what-we-do {
+        margin: 40px 0 0 0;
     }
-    .what-we-do .hardware {
-        margin: 0 0 30px 0;
-    }
+        .what-we-do .projects {
+            margin: 0;
+        }
+        .what-we-do .hardware {
+            margin: 0 0 30px 0;
+        }
+  
+    .projects .container-fluid .row {
+        margin-right: 0;
+    }    
+        .projects .container-fluid .row .col-md-12 {
+            padding-right: 0;
+        }
     
 }
 
@@ -578,7 +652,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .what-we-do {
-        margin: 40px 0;
+        margin: 40px 0 0 0;
     }
         .what-we-do .projects {
             margin: 30px 0 0 0;
@@ -586,5 +660,13 @@ h1, h2, h3, h4, h5, h6 {
         .what-we-do .hardware {
             width: 100%;
         }
+    
+    .owl-theme .owl-controls .owl-buttons {
+        display: none;
+    }
+    
+    .slider .slide .description .text {
+        margin: 0;
+    }
 
 }
