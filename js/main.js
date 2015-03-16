@@ -96,6 +96,13 @@ $(document).ready(function(){
     
     //mail
     
+    function postEmail() {
+        $.post( "email.php", $( "#order" ).serialize() );
+    }    
+    function postTel() {
+        $.post( "tel.php", $( "#order" ).serialize() );
+    }
+    
     $('.submit').on('click', function(e) {
         e.preventDefault();
         $('.requered').each(function() {
@@ -103,7 +110,13 @@ $(document).ready(function(){
                 $(this).css('border', '#e02525 2px solid');
                 $(this).attr("placeholder","Обязательно заполните это поле");
             } else {
-                $.post( "order.php", $( "#order" ).serialize() );
+                var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+                if(pattern.test($(this).val())) {
+                    postEmail();
+                } else {
+                    postTel();
+                }
+
                 $('#order')[0].reset();
                 $(this).attr("placeholder","Email или телефон для связи");
                 $(this).css('border', '#c0c0c0 2px solid');
