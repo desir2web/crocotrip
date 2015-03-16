@@ -105,6 +105,7 @@ $(document).ready(function(){
             } else {
                 $.post( "order.php", $( "#order" ).serialize() );
                 $('#order')[0].reset();
+                $(this).attr("placeholder","Email или телефон для связи");
                 $(this).css('border', '#c0c0c0 2px solid');
                 $('.submit').html('Спасибо!');
                 $('.submit').removeClass('blue');
