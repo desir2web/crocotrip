@@ -43,13 +43,15 @@ $(document).ready(function(){
     
     //menu on mobile
     
-    $(".menu-toggle").on('click', function(){
-            $('.nav').addClass('open');
-			return false;
+    $(".menu-toggle").on('click', function(e){
+        e.preventDefault();
+        $('.nav').addClass('open');
     });
-    $(".close").on('click', function(){
+    $('.nav a').on('click',function(e){
+        e.preventDefault();
+        if ($('.nav').hasClass('open')) {
             $('.nav').removeClass('open');
-			return false;
+        }
     });
     
     //trigger click on maps
@@ -77,16 +79,16 @@ $(document).ready(function(){
     $(window).on('load', function(e){
         e.preventDefault();
         var activeScreen = window.location.hash,
-            navHeight = $('.nav').height(),
+            navHeight = 70, //$('.nav').height(),
             blockPosition = $( activeScreen ).offset().top,
             topPos = blockPosition - navHeight;
         scrolling(topPos);
     });
     
-    $('a').on('click',  function(e){
+    $('.go-to').on('click',  function(e){
         e.preventDefault();
         var goScreen = $(this).attr('href'),
-            navHeight = $('.nav').height(),
+            navHeight = 70, //$('.nav').height(),
             blockPosition = $( goScreen ).offset().top,
             topPos = blockPosition - navHeight;
         scrolling(topPos);
