@@ -93,5 +93,30 @@ $(document).ready(function(){
             topPos = blockPosition - navHeight;
         scrolling(topPos);
     });
+    
+    //mail
+    
+    $('.submit').on('click', function(e) {
+        e.preventDefault();
+        $('.requered').each(function() {
+            if(!$(this).val().length) {
+                $(this).css('border', '#e02525 2px solid');
+                $(this).attr("placeholder","Обязательно заполните это поле");
+            } else {
+                $.post( "order.php", $( "#order" ).serialize() );
+                $('#order')[0].reset();
+                $(this).css('border', '#c0c0c0 2px solid');
+                $('.submit').html('Спасибо!');
+                $('.submit').removeClass('blue');
+                $('.submit').addClass('mint');
+                
+                setTimeout(function(){
+                    $(".submit").html("Отправить");
+                    $('.submit').removeClass('mint');
+                    $('.submit').addClass('blue');
+                }, 3000);
+            }
+        });
+    });
 
 });
