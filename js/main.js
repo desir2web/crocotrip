@@ -1,13 +1,20 @@
 $(document).ready(function(){
     
+    //set all needs heights
+    
     function setSize() {
         var scrHi = $(window).height()-40;
         $('.tablecell').css('height',scrHi+'px');
     }
+    setSize();
+    
     function setSliderSize() {
         var scrHi = $(window).height()-90;
         $('.slide').css('height',scrHi+'px');
     }
+    setSliderSize();
+    
+    //swicth menu appearance
     
     function setMenuTop() {
         var switchPos = $(window).height()-$('.nav').height()-20;
@@ -24,14 +31,8 @@ $(document).ready(function(){
             }
         });
     }
-     
-    //set tablecell height   
-    setSize();
-    setSliderSize();
-    
-    //swicth menu appearance
     setMenuTop();
-    
+
     //watch for window size
     
     $(window).on('resize',function(){
@@ -64,7 +65,31 @@ $(document).ready(function(){
             }
         });
     }
-    
     showMapInfo();
+    
+    //navigation
+    
+    function scrolling(position) {
+        var speed = 800;
+        $('html, body').stop().animate({scrollTop: position}, speed );
+    }
+    
+    $(window).on('load', function(e){
+        e.preventDefault();
+        var activeScreen = window.location.hash,
+            navHeight = $('.nav').height(),
+            blockPosition = $( activeScreen ).offset().top,
+            topPos = blockPosition - navHeight;
+        scrolling(topPos);
+    });
+    
+    $('a').on('click',  function(e){
+        e.preventDefault();
+        var goScreen = $(this).attr('href'),
+            navHeight = $('.nav').height(),
+            blockPosition = $( goScreen ).offset().top,
+            topPos = blockPosition - navHeight;
+        scrolling(topPos);
+    });
 
 });
