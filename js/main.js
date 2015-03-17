@@ -78,8 +78,12 @@ $(document).ready(function(){
     
     $(window).on('load', function(e){
         e.preventDefault();
-        var activeScreen = window.location.hash,
-            navHeight = 70, //$('.nav').height(),
+        if (window.location.hash == '') {
+            var activeScreen = 'body';
+        } else {
+            var activeScreen = window.location.hash;
+        }
+        var navHeight = 70, //$('.nav').height(),
             blockPosition = $( activeScreen ).offset().top,
             topPos = blockPosition - navHeight;
         scrolling(topPos);
@@ -108,7 +112,7 @@ $(document).ready(function(){
         $('.requered').each(function() {
             if(!$(this).val().length) {
                 $(this).css('border', '#e02525 2px solid');
-                $(this).attr("placeholder","Обязательно заполните это поле");
+                $(this).attr("placeholder","Обязательно укажите email/телефон");
             } else {
                 var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
                 if(pattern.test($(this).val())) {
