@@ -62,12 +62,12 @@ EOD;
 $mail = new PHPMailer;
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'crocotrip.com';  // Specify main and backup SMTP servers
+$mail->Host = 'smtp.crocotrip.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'hello@crocotrip.com';                 // SMTP username
-$mail->Password = 'email4croco';                           // SMTP password
-$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 587;                                    // TCP port to connect to
+$mail->Password = 'hello4croco123';                           // SMTP password
+$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 465;                                    // TCP port to connect to
 
 $mail->From = 'hello@crocotrip.com';
 $mail->FromName = 'Crocotrip';
@@ -94,12 +94,12 @@ if(!$mail->send()) {
 $mailMe = new PHPMailer;
 
 $mailMe->isSMTP();                                      // Set mailer to use SMTP
-$mailMe->Host = 'crocotrip.com';  // Specify main and backup SMTP servers
+$mailMe->Host = 'smtp.crocotrip.com';  // Specify main and backup SMTP servers
 $mailMe->SMTPAuth = true;                               // Enable SMTP authentication
 $mailMe->Username = 'hello@crocotrip.com';                 // SMTP username
-$mailMe->Password = 'email4croco';                           // SMTP password
-$mailMe->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-$mailMe->Port = 587;                                    // TCP port to connect to
+$mailMe->Password = 'hello4croco123';                           // SMTP password
+$mailMe->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+$mailMe->Port = 465;                                   // TCP port to connect to
 
 $mailMe->From = 'hello@crocotrip.com';
 $mailMe->FromName = 'Crocotrip';
