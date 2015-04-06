@@ -57,7 +57,7 @@ $(document).ready(function(){
     //trigger click on maps
     
     function showMapInfo() {
-        var showPos = $('.team').offset().top;
+        var showPos = $('.process').offset().top;
         $(window).on('scroll',function(){
             var curPos = $(window).scrollTop();
             if (curPos > showPos) {
