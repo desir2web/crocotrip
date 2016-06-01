@@ -4,9 +4,9 @@
 
 require 'phpmailer/PHPMailerAutoload.php';
 
-$contact = $_POST['name'];
+$name = $_POST['name'];
 $contact = $_POST['contact'];
-$contact = $_POST['about'];
+$about = $_POST['about'];
 
 $messageMe = <<<EOD
 
@@ -41,12 +41,14 @@ EOD;
 $mail = new PHPMailer;
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.crocotrip.com';  // Specify main and backup SMTP servers
+$mail->Host = 'smtp.yandex.ru';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'hello@crocotrip.com';                 // SMTP username
 $mail->Password = 'hello4croco123';                           // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                   // TCP port to connect to
+
+$mail->CharSet = 'UTF-8';
 
 $mail->From = 'hello@crocotrip.com';
 $mail->FromName = 'Crocotrip';

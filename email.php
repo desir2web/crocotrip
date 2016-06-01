@@ -4,9 +4,9 @@
 
 require 'phpmailer/PHPMailerAutoload.php';
 
-$contact = $_POST['name'];
+$name = $_POST['name'];
 $contact = $_POST['contact'];
-$contact = $_POST['about'];
+$about = $_POST['about'];
 $pdf = "downloads/presentation.pdf";
 
 $message = <<<EOD
@@ -61,13 +61,17 @@ EOD;
 
 $mail = new PHPMailer;
 
+$mail->CharSet = 'UTF-8';
+
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.crocotrip.com';  // Specify main and backup SMTP servers
+$mail->Host = 'smtp.yandex.ru';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'hello@crocotrip.com';                 // SMTP username
 $mail->Password = 'hello4croco123';                           // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
+
+$mail->CharSet = 'UTF-8';
 
 $mail->From = 'hello@crocotrip.com';
 $mail->FromName = 'Crocotrip';
@@ -93,13 +97,17 @@ if(!$mail->send()) {
 
 $mailMe = new PHPMailer;
 
+$mailMe->CharSet = 'UTF-8';
+
 $mailMe->isSMTP();                                      // Set mailer to use SMTP
-$mailMe->Host = 'smtp.crocotrip.com';  // Specify main and backup SMTP servers
+$mailMe->Host = 'smtp.yandex.ru';  // Specify main and backup SMTP servers
 $mailMe->SMTPAuth = true;                               // Enable SMTP authentication
 $mailMe->Username = 'hello@crocotrip.com';                 // SMTP username
 $mailMe->Password = 'hello4croco123';                           // SMTP password
 $mailMe->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mailMe->Port = 465;                                   // TCP port to connect to
+
+$mail->CharSet = 'UTF-8';
 
 $mailMe->From = 'hello@crocotrip.com';
 $mailMe->FromName = 'Crocotrip';

@@ -292,6 +292,7 @@ h1, h2, h3, h4, h5, h6, strong {
         cursor: default;
         width: 46px;
         z-index: 1;
+        white-space: nowrap;
     }
         .header a[href*="tel:"]:hover {
             background-color: #78d006;
